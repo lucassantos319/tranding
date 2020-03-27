@@ -1,0 +1,2 @@
+# tranding
+Python Tranding 
