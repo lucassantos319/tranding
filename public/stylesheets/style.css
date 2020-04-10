@@ -1,8 +1,16 @@
 body {
-  padding: 50px;
+  padding: 20px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}
+
+.basic{
+  border: 1px black solid;
+}
+
+.navbarmy{
+  background-color: black;
 }
