@@ -1,4 +1,3 @@
-
 var data = require('d:/programas/tranding/public/javascripts/importData');
 var express = require('express');
 var bodyParser = require('body-parser');
@@ -8,7 +7,12 @@ var importD = new data();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express'});   
+  res.render('stockExchange', { title: 'Express'});   
+});
+
+// Resposta com o Json 
+router.get('/search', async function(req, res, next) {
+  res.json(await importD.searchSymbol(req.query.inputCode));
 });
 
 module.exports = router;

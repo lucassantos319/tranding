@@ -1,16 +1,67 @@
 body {
-  padding: 20px;
+  padding-top: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
-  color: #00B7FF;
-}
 
 .basic{
   border: 1px black solid;
 }
 
-.navbarmy{
-  background-color: black;
+.mnav{
+  background-color: #000000;
+}
+
+.teste{
+  text-align: center;
+}
+
+.teste span{
+  color: #d3d3d3;
+  font-style: italic;
+}
+
+.teste button{
+  background-color: white;
+  border:none;
+  padding: 15px 32px;
+  padding-left: 180px;
+  padding-right: 180px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-color: #d3d3d3;  
+  transition: 0.2s;
+}
+
+ul{
+  list-style-type : none;
+} 
+
+.mainBlockStock{
+  padding-top:40px;
+}
+
+.mainBlock {
+  background-image: url('/public/images/home/stockImg.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.teste button:hover{
+  border-left: 3px solid #d3d3d3;
+}
+
+.teste button:focus {
+  outline: none;
+}
+
+
+.teste i{
+  color:#D3D3D3;
+  margin-right:10px;
 }

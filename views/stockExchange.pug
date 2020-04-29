@@ -1,0 +1,37 @@
+extends layout
+
+block main
+
+    script(src="/public/javascripts/teste.js")
+    script.
+    
+
+        async function JsonRequest(){
+            var dataJson ; 
+            console.log('Entreii');
+            await $.get("http://localhost:3000/search", function( data ) {
+                console.log(data)
+            });
+        }
+
+    div(class='mainBlockStock')        
+        div(class='result')
+            ul(class='teste' id='myList') 
+                
+        div(class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true") 
+            div(class="modal-dialog" role="document")
+                div(class="modal-content")
+                    div(class="modal-header")
+                        h5(class="modal-title" id="exampleModalLabel") Add comporate action
+                        button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+                        span(aria-hidden="true") &times;
+                    div(class="modal-body")
+                        form(action='/stockExchange/search')
+                            div(class="form-group")
+                                input(type="text" name='inputCode' class="form-control" id="recipient-name")
+                            button(type="submit" style='margin-left:390px' class="btn btn-primary" ) Search
+                            
+
+block footer
+
+//- layout do spreadsheets
