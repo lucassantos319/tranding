@@ -2,35 +2,19 @@ doctype html
 html
   head
     title= title
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Acme')
     link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous")
     link(rel='stylesheet', href='/stylesheets/style.css')
+    link(href="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.css" rel="stylesheet")
     script(src="https://cdn.plot.ly/plotly-latest.min.js") 
     script(src='https://kit.fontawesome.com/5450f6a0e2.js')
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
     script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js")
+    script(src="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.js")
   
-  body(onload='setup()')
-    //- Menu como layout basico e alterar apenas a main
-    //- problema com o layout quando o nav está fixed-top 
-    
-    nav(class="navbar navbar-expand-lg navbar-dark static-top mnav fixed-top")
-      div(class="container")
-        a(class="navbar-brand" href="#")
-          img(src='/images/bgWhiteLogo.png' width='65' height='50' )
-            
-      div(class="" id="navbarResponsive")
-        ul(class="navbar-nav ml-auto")
-          li(class="nav-item")
-            a(class="nav-link" href="/") Home
-            span(class="sr-only")(current)
-        
-          li(class="nav-item" style='margin-right:20px; margin-left:20px')
-            a(class="nav-link" style='display:inline;' href="/stockExchange") Stock Exchange
-            
-            
-          li(class="nav-item")
-              a(class="nav-link" href="#") Contact
+                  
+  block body
 
-    block main
-    block footer 
+  block footer    
+
 

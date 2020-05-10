@@ -1,28 +1,4 @@
 
-var itemButton = document.createElement('li');
-var button = document.createElement('button');
-var i = document.createElement('i');
-var span = document.createElement('span');
-
-
-function setup(){
-    
-    button.setAttribute('type','button');
-    button.setAttribute('data-toggle','modal');
-    button.setAttribute('data-target','#exampleModal');
-    button.setAttribute('onclick','teste()');
-    i.setAttribute('class','fas fa-plus');
-    span.textContent = 'Add Action';
-    itemButton.setAttribute('class','itemList');
-    
-    button.appendChild(i);
-    button.appendChild(span);
-    itemButton.appendChild(button);
-    
-    document.getElementById('myList').appendChild(itemButton);
-}
-
-
 function formPostSend(){
     const request = require('request')
 
@@ -44,6 +20,7 @@ function formPostSend(){
 }
 
 function teste(){
+
     console.log('apenas um teste');
 }
 

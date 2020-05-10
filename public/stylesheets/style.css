@@ -16,24 +16,28 @@ body {
   text-align: center;
 }
 
-.teste span{
+.addActionFunct span{
   color: #d3d3d3;
   font-style: italic;
 }
 
-.teste button{
+#listSearch{
+  margin: inherit;
+  margin-top:20px;
+}
+
+#listSearch tr{
+
+}
+
+.addActionFunct button{
   background-color: white;
   border:none;
-  padding: 15px 32px;
-  padding-left: 180px;
-  padding-right: 180px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
-  border-color: #d3d3d3;  
-  transition: 0.2s;
+  display: block;
+  width: 100%;
 }
 
 ul{
@@ -44,24 +48,75 @@ ul{
   padding-top:40px;
 }
 
-.mainBlock {
-  background-image: url('/public/images/home/stockImg.jpg');
+.mainBlock{
+  padding-top:25px;
+}
+
+
+.imgDiv{
+  /* min-width: 500px; */
+  background-image: url("/public/images/home/stockImg.jpg");
+  min-height: 400px;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  opacity: 0.87;
 }
 
-.teste button:hover{
+table {
+  margin:20px  ;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+
+/* tr:nth-child(even) {
+  background-color: #dddddd;
+} */
+
+.addActionFunct{
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
+  background-color: white;
+  border-color: #d3d3d3;  
+  transition: 0.2s;
+}
+
+.addActionFunct:hover{
   border-left: 3px solid #d3d3d3;
 }
 
-.teste button:focus {
+.imgDiv h1{
+  font-family: 'Acme';
+  color:white;
+  font-size:5em;
+  padding-left:60px;
+  padding-top:40px;
+}
+
+.imgDiv h2{
+
+  text-align: center;
+  padding-top: 60px;
+  color:white;
+  transition: 0.4s;
+
+}
+
+button:focus {
   outline: none;
 }
 
 
-.teste i{
+i {
   color:#D3D3D3;
   margin-right:10px;
 }

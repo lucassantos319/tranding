@@ -7,12 +7,16 @@ var importD = new data();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('stockExchange', { title: 'Express'});   
+  res.render('stockExchange', { title: 'Stock Exchange Table'});   
 });
 
 // Resposta com o Json 
 router.get('/search', async function(req, res, next) {
   res.json(await importD.searchSymbol(req.query.inputCode));
+});
+
+router.get('/query',async function(req,res,next){
+  res.json(await importD.queryData());
 });
 
 module.exports = router;

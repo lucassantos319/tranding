@@ -25,7 +25,7 @@ class importData {
     async filterData(){
         const query = await axios.get(this.link);
         return query.data['Time Series (1min)'];
-    }
+    };
 
     async searchSymbol(inputCode){
         console.log(inputCode);
@@ -35,7 +35,8 @@ class importData {
         console.log(this.searchLink);
         const query = await axios.get(this.searchLink);
         return query.data;       
-    }
+    };
+    
 }    
 
 module.exports = importData;

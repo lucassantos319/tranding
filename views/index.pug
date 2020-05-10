@@ -1,12 +1,16 @@
 extends layout
 
-block main
+block body
 
     script(src="/public/javascripts/teste.js")
 
-    div(class='mainBlock')        
-        img(src='/public/images/home/stockImg.jpg')
-        p op
+    body
+        include menuBar.pug
+        div(class='mainBlock')        
+            div(class='imgDiv')
+                h1
+                    i Stock Exchange Analyze
+                h2 Projeto para analise dos 
 
 block footer
 
