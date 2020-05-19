@@ -16,7 +16,7 @@ router.get('/search', async function(req, res, next) {
 });
 
 router.get('/query',async function(req,res,next){
-  res.json(await importD.queryData());
+  res.json(await importD.queryData(req.query.symbol));
 });
 
 module.exports = router;

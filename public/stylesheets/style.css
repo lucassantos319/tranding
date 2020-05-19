@@ -9,7 +9,7 @@ body {
 }
 
 .mnav{
-  background-color: #000000;
+  background-color: #fcba03;
 }
 
 .teste{
@@ -26,9 +26,10 @@ body {
   margin-top:20px;
 }
 
-#listSearch tr{
-
+#listSearch tr td:hover{
+  background-color: #ffdf87;
 }
+
 
 .addActionFunct button{
   background-color: white;

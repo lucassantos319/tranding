@@ -17,7 +17,10 @@ class importData {
         this.searchLink = '';
     }
     
-    async queryData() {
+    async queryData(symbolSearch) {
+        this.searchLink = 'https://www.alphavantage.co/query?function='
+        +funct+'&symbol='+symbolSearch+'&interval='+interval+'&apikey='+apiKey ; 
+
         const query = await axios.get(this.link);
         return query.data;
     };
