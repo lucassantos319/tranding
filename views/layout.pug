@@ -8,10 +8,13 @@ html
     link(href="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.css" rel="stylesheet")
     script(src="https://cdn.plot.ly/plotly-latest.min.js") 
     script(src='https://kit.fontawesome.com/5450f6a0e2.js')
-    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
     script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js")
     script(src="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.js")
-  
+    script.
+      $("#exampleModal").on('show.bs.modal', function(){
+        alert("Hello World!");
+      });
                   
   block body
 

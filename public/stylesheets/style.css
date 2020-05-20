@@ -26,8 +26,9 @@ body {
   margin-top:20px;
 }
 
-#listSearch tr td:hover{
+#listSearch tr:not(:first-child):hover{
   background-color: #ffdf87;
+  cursor: pointer;
 }
 
 

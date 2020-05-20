@@ -2,10 +2,43 @@ extends layout
 
 block body
 
-    script(src="/public/javascripts/teste.js")
     script(src="/public/javascripts/controller.js")
     script.
         var controllerData = new ControllerData();
+
+        $(document).on('hide.bs.modal',"#exampleModal", function(){            
+            var table = document.getElementById('listSearch');
+            if (table.childNodes.length > 0){
+                table.innerHTML = "";
+                while (table.firstChild)
+                    table.removeChild(table.firstChild);
+
+                var input = document.getElementById('recipient-name');
+                var button = document.getElementById('searchSub');
+                
+                input.value = ''
+                input.style.visibility = 'visible';
+                button.style.visibility = 'visible';
+
+
+                input.style.display = '';
+                button.style.display = '';
+            }
+        });
+
+        var count = 0 
+        $(document).on('show.bs.modal',"#exampleModal",function(){
+            var input = document.getElementById("recipient-name");
+            if (count == 0){
+                input.addEventListener("keyup", function(event) {
+                    if (event.keyCode === 13) {
+                        event.preventDefault();
+                        document.getElementById("searchSub").click();
+                    }
+                });
+            } 
+            count++;           
+        });
 
     block body
         body
@@ -14,7 +47,7 @@ block body
 
             div(class='mainBlockStock')        
                 div(class='result'  )
-                    table
+                    table(id='mainTable')
                         tr
                             th Nome da Aplicação
                             th Variação Valor
@@ -44,13 +77,7 @@ block body
 
                                 table(class='listActionConsult' id='listSearch')
                
-                //- div 
-                //-     form(action='/stockExchange/query')
-                //-         label Action
-                //-         input(type="text" style='margin-left:20px' name='actionGet')
-                //-         button(type="submit" style='margin-left:20px' class="btn btn-primary" ) Query Test
-
-
+               
 block footer
 
 //- layout do spreadsheets

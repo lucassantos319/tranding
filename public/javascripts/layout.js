@@ -1,7 +1,7 @@
 class Layout{   
     
-    pushMainTable(){
-
+    pushMainTable(jsonData){
+        console.log(jsonData)
     };
 
 }
