@@ -25,11 +25,7 @@ class importData {
         return query.data;
     };
  
-    async filterData(){
-        const query = await axios.get(this.link);
-        return query.data['Time Series (1min)'];
-    };
-
+    
     async searchSymbol(inputCode){
         console.log(inputCode);
         this.searchLink = 'https://www.alphavantage.co/query?function='+
